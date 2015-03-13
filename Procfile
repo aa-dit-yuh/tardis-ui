@@ -1,1 +1,1 @@
-web: gunicorn tardis.wsgi --log-file -
+web: gunicorn tardis_simulator.wsgi --log-file -
