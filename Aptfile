@@ -4,4 +4,3 @@ python-all-dev
 python3-all-dev
 liblapack-dev
 libatlas-base-dev
-cython

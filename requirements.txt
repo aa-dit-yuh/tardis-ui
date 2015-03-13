@@ -6,4 +6,5 @@ gunicorn
 psycopg2
 static3
 wsgiref
+cython
 tardis-sn
