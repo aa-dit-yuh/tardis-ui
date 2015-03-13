@@ -59,6 +59,8 @@ WSGI_APPLICATION = 'tardis_simulator.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.7/ref/settings/#databases
 
+DATABASES = {}
+
 # Internationalization
 # https://docs.djangoproject.com/en/1.7/topics/i18n/
 
