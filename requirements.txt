@@ -1,0 +1,9 @@
+Django
+dj-database-url
+dj-static
+django-toolbelt
+gunicorn
+psycopg2
+static3
+wsgiref
+tardis-sn
