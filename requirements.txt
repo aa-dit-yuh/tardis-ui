@@ -12,3 +12,4 @@ cython
 tardis-sn
 django-bootstrap3
 django-graphos==0.0.2a0
+pyyaml
