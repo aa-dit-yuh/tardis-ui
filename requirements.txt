@@ -11,4 +11,4 @@ wsgiref
 cython
 tardis-sn
 django-bootstrap3
-django-graphos
+django-graphos==0.0.2a0

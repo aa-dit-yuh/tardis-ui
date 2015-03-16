@@ -2,7 +2,7 @@ from django.shortcuts import render
 
 from graphos.renderers import gchart
 from graphos.sources.simple import SimpleDataSource
-import tardis
+from tardis import run_tardis
 
 
 def home(request):
