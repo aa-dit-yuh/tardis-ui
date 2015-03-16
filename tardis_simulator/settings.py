@@ -41,6 +41,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'bootstrap3',
     'graphos',
+    'tardis',
     'tardis_simulator',
 )
 

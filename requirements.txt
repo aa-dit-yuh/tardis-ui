@@ -1,3 +1,5 @@
+--allow-all-external
+--allow-unverified django-graphos
 Django
 dj-database-url
 dj-static
@@ -9,4 +11,4 @@ wsgiref
 cython
 tardis-sn
 django-bootstrap3
-django-graphos --allow-unverified
+django-graphos
