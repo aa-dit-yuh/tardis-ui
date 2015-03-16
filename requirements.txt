@@ -14,5 +14,4 @@ django-graphos==0.0.2a0
 pyyaml
 pandas
 astropy
-h5py
 tardis-sn

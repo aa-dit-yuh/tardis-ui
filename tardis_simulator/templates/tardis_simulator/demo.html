@@ -1,0 +1,16 @@
+{% extends 'tardis_simulator/base.html' %}
+
+{% block title %}
+Demo
+{% endblock %}
+
+{% block bootstrap3_extra_head %}
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+<script type="text/javascript">
+    google.load("visualization", "1", {packages:["corechart"]});
+</script>
+{% endblock %}
+
+{% block content %}
+	{{ chart.as_html }}
+{% endblock %}
