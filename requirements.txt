@@ -8,3 +8,5 @@ static3
 wsgiref
 cython
 tardis-sn
+django-bootstrap3
+django-graphos
