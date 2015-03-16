@@ -9,4 +9,4 @@ wsgiref
 cython
 tardis-sn
 django-bootstrap3
-django-graphos
+django-graphos --allow-unverified
