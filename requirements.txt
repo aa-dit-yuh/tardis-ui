@@ -13,6 +13,8 @@ django-bootstrap3
 django-graphos==0.0.2a0
 pyyaml
 pandas
+numpy
+scipy
 astropy
 h5py==2.2.1
 tardis-sn
