@@ -1,5 +1,5 @@
 --allow-all-external
---allow-unverified django-graphos
+--allow-unverified django-graphos==0.0.2a0
 Django
 dj-database-url
 dj-static
