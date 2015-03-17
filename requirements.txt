@@ -1,4 +1,3 @@
---allow-all-external
 Django
 dj-database-url
 dj-static
