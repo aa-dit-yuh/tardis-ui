@@ -10,7 +10,7 @@ static3
 wsgiref
 cython
 django-bootstrap3
-django-graphos==0.0.2a0
+django-graphos
 pyyaml
 pandas
 numpy
