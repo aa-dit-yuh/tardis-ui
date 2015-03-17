@@ -1,5 +1,4 @@
 --allow-all-external
---allow-unverified django-graphos==0.0.2a0
 Django
 dj-database-url
 dj-static
@@ -16,5 +15,5 @@ pandas
 numpy
 scipy
 astropy
-h5py==2.2.1
+h5py
 tardis-sn
