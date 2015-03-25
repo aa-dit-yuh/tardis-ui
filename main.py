@@ -4,8 +4,7 @@ import tornado.ioloop
 import tornado.options
 import tornado.web
 
-from tornado.options import define
-define("port", default=5000, help="run on the given port", type=int)
+tornado.options.define("port", default=5000, help="run on the given port", type=int)
 
 
 class Application(tornado.web.Application):
