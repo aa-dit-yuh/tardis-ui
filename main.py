@@ -1,5 +1,4 @@
 import os.path
-import tornado.escape
 import tornado.httpserver
 import tornado.ioloop
 import tornado.options
