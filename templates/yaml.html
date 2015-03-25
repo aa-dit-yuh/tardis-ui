@@ -1,0 +1,102 @@
+{% extends 'skeleton.html' %}
+
+{% block title %}
+  Configuration Generator
+{% end %}
+
+{% block content %}
+<form class="form" method="post">
+  <input type='hidden' name='csrfmiddlewaretoken' value='t7qhgweCJrfhlTo3owhsi3UAIqqFRulV' />
+  <div class="panel panel-primary">
+    <div class="panel-heading">
+      Tardis Config Version:
+    </div>
+    <div class="panel-body">
+      <div class="form-group"><label class="col-md-2 control-label" for="id_Input">Input</label><div class="col-md-4"><input class="form-control" id="id_Input" name="Input" placeholder="Input" required="required" title="Version of the configuration file" type="text" /><span class="help-block">Version of the configuration file
+</span></div></div>
+    </div>
+  </div>
+  <div class="panel panel-primary">
+    <div class="panel-heading">
+      Supernova
+    </div>
+    <div class="panel-body">
+      <div class="form-group"><label class="col-md-2 control-label" for="id_time_explosion">Time explosion</label><div class="col-md-4"><input class="form-control" id="id_time_explosion" name="time_explosion" placeholder="Time explosion" required="required" step="any" title="time since explosion" type="number" /><span class="help-block">time since explosion
+</span></div></div>
+<div class="form-group"><label class="col-md-2 control-label" for="id_luminosity_requested">Luminosity requested</label><div class="col-md-4"><input class="form-control" id="id_luminosity_requested" name="luminosity_requested" placeholder="Luminosity requested" required="required" step="any" title="requested output luminosity for simulation" type="number" value="1 solLum" /><span class="help-block">requested output luminosity for simulation
+</span></div></div>
+<div class="form-group"><label class="col-md-2 control-label" for="id_luminosity_wavelength_start">Luminosity wavelength start</label><div class="col-md-4"><input class="form-control" id="id_luminosity_wavelength_start" name="luminosity_wavelength_start" placeholder="Luminosity wavelength start" step="any" title="start of the integral needed for getting the luminosity right" type="number" value="0 angstrom" /><span class="help-block">start of the integral needed for getting the luminosity right
+</span></div></div>
+<div class="form-group"><label class="col-md-2 control-label" for="id_distance">Distance</label><div class="col-md-4"><input class="form-control" id="id_distance" name="distance" placeholder="Distance" step="any" title="distance to supernova" type="number" /><span class="help-block">distance to supernova
+</span></div></div>
+<div class="form-group"><label class="col-md-2 control-label" for="id_luminosity_wavelength_end">Luminosity wavelength end</label><div class="col-md-4"><input class="form-control" id="id_luminosity_wavelength_end" name="luminosity_wavelength_end" placeholder="Luminosity wavelength end" step="any" title="start of the integral needed for getting the luminosity right" type="number" value="inf angstrom" /><span class="help-block">start of the integral needed for getting the luminosity right
+</span></div></div>
+    </div>
+  </div>
+  <div class="panel panel-primary">
+    <div class="panel-heading">
+      Atom Data
+    </div>
+    <div class="panel-body">
+      <div class="form-group"><label class="col-md-2 control-label" for="id_Input">Input</label><div class="col-md-4"><input class="form-control" id="id_Input" name="Input" placeholder="Input" required="required" title="path or filename to the Atomic Data HDF5 file" type="text" /><span class="help-block">path or filename to the Atomic Data HDF5 file
+</span></div></div>
+    </div>
+  </div>
+  <div class="panel panel-primary">
+    <div class="panel-heading">
+      Plasma
+    </div>
+    <div class="panel-body">
+      <div class="form-group"><label class="col-md-2 control-label" for="id_radiative_rates_type">Radiative rates type</label><div class="col-md-4"><input class="form-control" id="id_radiative_rates_type" name="radiative_rates_type" placeholder="Radiative rates type" required="required" title="radiative rates treatment mode" type="text" /><span class="help-block">radiative rates treatment mode
+</span></div></div>
+<div class="form-group"><label class="col-md-2 control-label" for="id_initial_t_rad">Initial t rad</label><div class="col-md-4"><input class="form-control" id="id_initial_t_rad" name="initial_t_rad" placeholder="Initial t rad" step="any" title="initial radiative temperature in all cells (if set" type="number" value="10000 K" /><span class="help-block">initial radiative temperature in all cells (if set
+</span></div></div>
+<div class="form-group"><label class="col-md-2 control-label" for="id_disable_electron_scattering">&#160;</label><div class="col-md-4"><div class="checkbox"><label for="id_disable_electron_scattering" title="disable electron scattering process in montecarlo part - non-physical only for tests
+"><input class="" id="id_disable_electron_scattering" name="disable_electron_scattering" type="checkbox" /> Disable electron scattering</label></div><span class="help-block">disable electron scattering process in montecarlo part - non-physical only for tests
+
+</span></div></div>
+<div class="form-group"><label class="col-md-2 control-label" for="id_excitation">Excitation</label><div class="col-md-4"><input class="form-control" id="id_excitation" name="excitation" placeholder="Excitation" required="required" title="excitation treatment mode" type="text" /><span class="help-block">excitation treatment mode
+</span></div></div>
+<div class="form-group"><label class="col-md-2 control-label" for="id_delta_treatment">Delta treatment</label><div class="col-md-4"><input class="form-control" id="id_delta_treatment" name="delta_treatment" placeholder="Delta treatment" step="any" title="In the saha calculation set delta equals to the number given in this configuration item. if set to None (default), normal delta treatment (as described in Mazzali & Lucy 1993) will be applied
+" type="number" /><span class="help-block">In the saha calculation set delta equals to the number given in this configuration item. if set to None (default), normal delta treatment (as described in Mazzali & Lucy 1993) will be applied
+
+</span></div></div>
+<div class="form-group"><label class="col-md-2 control-label" for="id_ionization">Ionization</label><div class="col-md-4"><input class="form-control" id="id_ionization" name="ionization" placeholder="Ionization" required="required" title="ionization treatment mode" type="text" /><span class="help-block">ionization treatment mode
+</span></div></div>
+<div class="form-group"><label class="col-md-2 control-label" for="id_w_epsilon">W epsilon</label><div class="col-md-4"><input class="form-control" id="id_w_epsilon" name="w_epsilon" placeholder="W epsilon" step="any" title="w to use when j_blues get numerically 0. - avoids numerical complications" type="number" value="1e-10" /><span class="help-block">w to use when j_blues get numerically 0. - avoids numerical complications
+</span></div></div>
+<div class="form-group"><label class="col-md-2 control-label" for="id_initial_t_inner">Initial t inner</label><div class="col-md-4"><input class="form-control" id="id_initial_t_inner" name="initial_t_inner" placeholder="Initial t inner" step="any" title="initial temperature of the inner boundary black body. If set to -1 K  will result in automatic calculation of boundary
+" type="number" value="-1 K" /><span class="help-block">initial temperature of the inner boundary black body. If set to -1 K  will result in automatic calculation of boundary
+
+</span></div></div>
+<div class="form-group"><label class="col-md-2 control-label" for="id_line_interaction_type">Line interaction type</label><div class="col-md-4"><input class="form-control" id="id_line_interaction_type" name="line_interaction_type" placeholder="Line interaction type" required="required" title="line interaction mode" type="text" /><span class="help-block">line interaction mode
+</span></div></div>
+    </div>
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        NLTE
+      </div>
+      <div class="panel-body">
+        <div class="form-group"><label class="col-md-2 control-label" for="id_species">Species</label><div class="col-md-4"><input class="form-control" id="id_species" name="species" placeholder="Species" title="Species that are requested to be NLTE treated in the format  ['Si 2', 'Ca 1', etc.]
+" type="text" value="[]" /><span class="help-block">Species that are requested to be NLTE treated in the format  ['Si 2', 'Ca 1', etc.]
+
+</span></div></div>
+<div class="form-group"><label class="col-md-2 control-label" for="id_coronal_approximation">&#160;</label><div class="col-md-4"><div class="checkbox"><label for="id_coronal_approximation" title="set all jblues=0.0"><input class="" id="id_coronal_approximation" name="coronal_approximation" type="checkbox" /> Coronal approximation</label></div><span class="help-block">set all jblues=0.0
+</span></div></div>
+<div class="form-group"><label class="col-md-2 control-label" for="id_classical_nebular">&#160;</label><div class="col-md-4"><div class="checkbox"><label for="id_classical_nebular" title="sets all beta_sobolevs to 1"><input class="" id="id_classical_nebular" name="classical_nebular" type="checkbox" /> Classical nebular</label></div><span class="help-block">sets all beta_sobolevs to 1
+</span></div></div>
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-primary">
+    <div class="panel-heading">
+      Spectrum
+    </div>
+    <div class="panel-body">
+      <div class="form-group"><label class="col-md-2 control-label" for="id_Input">Input</label><div class="col-md-4"><input class="form-control" id="id_Input" name="Input" placeholder="Input" required="required" title="Final spectrum sampling" type="text" /><span class="help-block">Final spectrum sampling
+</span></div></div>
+    </div>
+  </div>
+  <div class="form-group"><button class="btn btn-primary" type="submit">Generate YAML</button> <button class="btn" type="reset">Clear</button></div>
+</form>
+{% end %}
