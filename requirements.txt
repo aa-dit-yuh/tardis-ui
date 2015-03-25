@@ -1,1 +1,1 @@
-Tornado>=3
+tornado
