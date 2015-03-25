@@ -4,10 +4,16 @@ import tornado.ioloop
 import tornado.options
 import tornado.web
 
-tornado.options.define("port", default=5000, help="run on the given port", type=int)
+tornado.options.define(
+    "port",
+    default=5000,
+    help="run on the given port",
+    type=int,
+)
 
 
 class Application(tornado.web.Application):
+
     def __init__(self):
         handlers = [
             (r'/', HomeHandler),
@@ -22,6 +28,7 @@ class Application(tornado.web.Application):
 
 
 class HomeHandler(tornado.web.RequestHandler):
+
     def get(self):
         self.render(
             "home.html",
@@ -29,6 +36,7 @@ class HomeHandler(tornado.web.RequestHandler):
 
 
 class YAMLHandler(tornado.web.RequestHandler):
+
     def get(self):
         self.render(
             "yaml.html",
