@@ -12,17 +12,19 @@ tornado.options.define(
 )
 
 
+
 class Application(tornado.web.Application):
 
     def __init__(self):
         handlers = [
             (r'/', HomeHandler),
             (r'/yaml', YAMLHandler),
+            (r'/queue', QueueHandler),
         ]
         settings = dict(
             template_path=os.path.join(os.path.dirname(__file__), "templates"),
             static_path=os.path.join(os.path.dirname(__file__), "static"),
-            debug=True,
+            debug=False,
         )
         tornado.web.Application.__init__(self, handlers, **settings)
 
@@ -40,6 +42,14 @@ class YAMLHandler(tornado.web.RequestHandler):
     def get(self):
         self.render(
             "yaml.html",
+        )
+
+
+class QueueHandler(tornado.web.RequestHandler):
+
+    def get(self):
+        self.render(
+            "queue.html",
         )
 
 
