@@ -17,9 +17,11 @@ class Application(tornado.web.Application):
 
     def __init__(self):
         handlers = [
-            (r'/', HomeHandler),
-            (r'/yaml', YAMLHandler),
-            (r'/queue', QueueHandler),
+            tornado.web.url(r'/', HomeHandler, name='home'),
+            tornado.web.url(r'/yaml', YAMLHandler, name='yaml'),
+            tornado.web.url(r'/queue', QueueHandler, name='queue'),
+            tornado.web.url(r'/task/submit', FormHandler, name='submit'),
+            tornado.web.url(r'/task/([A-Za-z0-9\-]+)', TaskHandler, name='task'),
         ]
         settings = dict(
             template_path=os.path.join(os.path.dirname(__file__), "templates"),
@@ -50,6 +52,22 @@ class QueueHandler(tornado.web.RequestHandler):
     def get(self):
         self.render(
             "queue.html",
+        )
+
+
+class FormHandler(tornado.web.RequestHandler):
+
+    def get(self):
+        self.render(
+            "form.html",
+        )
+
+
+class TaskHandler(tornado.web.RequestHandler):
+
+    def get(self, UUID):
+        self.render(
+            "task.html",
         )
 
 

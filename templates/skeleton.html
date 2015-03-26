@@ -18,14 +18,14 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="/">TARDIS</a>
+            <a class="navbar-brand" href="{{ reverse_url('home') }}">TARDIS</a>
             <span class="navbar-text navbar-version pull-left"><b>1.0.1</b></span>
           </div>
           <div class="collapse navbar-collapse nav-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-              <li><a href="yaml">Generate your YAML</a></li>
-              <li><a href="submit">Submit a TARDIS task</a></li>
-              <li><a href="queue">Queue</a></li>
+              <li><a href="{{ reverse_url('yaml') }}">Generate your YAML</a></li>
+              <li><a href="{{ reverse_url('submit') }}">Submit a TARDIS task</a></li>
+              <li><a href="{{ reverse_url('queue') }}">Queue</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
               <li><a href="https://github.com/narayanaditya95/tardis-sn">View Source</a></li>
@@ -43,9 +43,9 @@
     </div>
     <div class="panel-footer navbar navbar-fixed-bottom">
       <div class="container">
-        <p class="pull-right">
-          <a href="#">Back to top</a>
-        </p>
+        <ul class="nav navbar-nav navbar-right">
+          <a href="#"><span class="glyphicon glyphicon-menu-up" aria-hidden="true"></span></a>
+        </ul>
         <p>
           Created by Aditya Narayan<br/>
           Created using Tornado and Bootstrap<br/>
@@ -55,5 +55,6 @@
   </div>
 </footer>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
   </body>
 </html>
