@@ -12,7 +12,6 @@ tornado.options.define(
 )
 
 
-
 class Application(tornado.web.Application):
 
     def __init__(self):
@@ -26,7 +25,7 @@ class Application(tornado.web.Application):
         settings = dict(
             template_path=os.path.join(os.path.dirname(__file__), "templates"),
             static_path=os.path.join(os.path.dirname(__file__), "static"),
-            debug=False,
+            debug=True,
         )
         tornado.web.Application.__init__(self, handlers, **settings)
 
